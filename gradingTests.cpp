@@ -1,5 +1,5 @@
-// gradingTests.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//Author: Aidan Dunne
+//This program calculates the average of a set of random test scores
 
 #include <iostream>
 #include <vector>
