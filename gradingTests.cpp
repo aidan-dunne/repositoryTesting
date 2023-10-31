@@ -2,16 +2,30 @@
 //
 
 #include <iostream>
+#include <vector>
+#include <ctime>
+
+using namespace std;
+
+const int SIZE = 100;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    vector <int> scores;
+    double avg = 0.0;
 
-    //testing
-    int num = 5;
-    const int test = num;
+    //Filling vector with SIZE random test scores between 50 and 100
+    for (int i = 0; i < SIZE; i++)
+    {
+        scores.push_back((rand() % 6 + 5) * 10);
+        avg += scores.at(i); //Finding sum of scores to calculate average
+    }
 
-    std::cout << test << "\n\n";
+    //Calculating average score
+    avg /= SIZE;
+
+    //Displaying average score
+    cout << "Average score: " << avg << "\n\n";
 
     return 0;
 }
